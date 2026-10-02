@@ -2,7 +2,7 @@
   "name": "sr",
   "productName": "sr",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Electron screen-recorder learning prototype with source selection, preview and WebM saving",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
