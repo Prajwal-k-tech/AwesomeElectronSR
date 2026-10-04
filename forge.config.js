@@ -4,6 +4,9 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
+    extendInfo: {
+      NSAudioCaptureUsageDescription: 'ScreenRec can record system audio when you enable it before choosing a capture source.',
+    },
   },
   rebuildConfig: {},
   makers: [

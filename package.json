@@ -1,15 +1,16 @@
 {
-  "name": "sr",
-  "productName": "sr",
+  "name": "screen-recorder",
+  "productName": "ScreenRec",
   "version": "1.0.0",
-  "description": "Electron screen-recorder learning prototype with source selection, preview and WebM saving",
+  "description": "Desktop screen recorder with source preview, optional system audio and WebM saving",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "test": "node --test"
   },
   "keywords": [],
   "author": {
