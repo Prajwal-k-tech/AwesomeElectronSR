@@ -8,9 +8,9 @@
 - The actual native “Save WebM recording” dialog opened. Canceling that exact dialog returned the expected cancellation status, discarded the clip, and left the preview stream closed. The app never requested microphone access.
 - The host uses Linux/PipeWire via a Hyprland desktop portal. Electron returned the host display even when the app window was launched on Xvfb. Preview was stopped immediately; no desktop-source recording was started or saved. Linux PipeWire source enumeration is limited by Electron/portal behavior.
 
-## Packaging limitation on this machine
+## Packaging
 
-`npm run package` exits with code 0 here but does not produce the expected `out/` directory. Electron Forge's packager reaches “Finalizing package” without an application bundle. Isolating the extraction step with the installed Node v26.8.1 and `extract-zip` 2.0.1 shows the Electron 36.2.0 Linux archive stalls while streaming the first 2.1 MB entry: the process remains alive until an 8-second timeout, while the archive itself passes `unzip -t`. The repository source/package configuration is not the observed failure point. A distributable should be built on a supported Node runtime or after resolving that local extraction/streaming issue.
+`npm run package` completed on Node.js 22.23.3 and produced `out/ScreenRec-linux-x64` (about 280 MB). Node.js 26.8.1 still stalls in `extract-zip` 2.0.1 while streaming the first 2.1 MB entry of Electron 36.2.0's Linux archive; `unzip -t` passes. Use the verified Node 22 runtime to package on this host. The cross-platform installer makers have not been exercised.
 
 ## Commands
 

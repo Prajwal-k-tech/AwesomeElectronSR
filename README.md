@@ -36,6 +36,11 @@ Create a local packaged application for the current platform with:
 npm run package
 ```
 
+The Linux x64 package was built successfully with Node.js 22.23.3. Electron Forge
+produced `out/ScreenRec-linux-x64` (about 280 MB). Node.js 26.8.1 stalled while
+extracting the Electron archive on this host; use the verified Node 22 runtime
+for packaging here.
+
 `npm run make` uses the configured Linux, Windows, and macOS makers. Each installer format needs its platform-specific build environment and has not been verified as a release artifact.
 
 ## Project files
