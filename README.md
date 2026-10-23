@@ -55,3 +55,7 @@ for packaging here.
 - `forge.config.js` defines packaging and the macOS system-audio usage string.
 
 Created by Prajwal K as an Electron learning project.
+
+## Recovery
+
+See [RECOVERY.md](RECOVERY.md) for rebuilding an offloaded checkout and restoring its dependencies/data.
